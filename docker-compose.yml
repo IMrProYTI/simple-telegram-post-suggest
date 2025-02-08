@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  simple-telegram-post-suggest:
+    build: .
+    restart: unless-stopped
+    volumes:
+      - ./db:/app/db
+    command: ["python", "main.py"]

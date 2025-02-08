@@ -13,7 +13,7 @@ from sqlhelper import Base, User, Post, Settings
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.WARN)
 print('[Predlozhka]Initializing database...')
 
-engine = create_engine('sqlite:///database.db')
+engine = create_engine('sqlite:///db/database.db')
 Base.metadata.create_all(engine)
 Session = scoped_session(sessionmaker(bind=engine))
 
