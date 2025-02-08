@@ -6,4 +6,5 @@ services:
     restart: unless-stopped
     volumes:
       - ./db:/app/db
+      - ./temp:/app/temp
     command: ["python", "main.py"]
